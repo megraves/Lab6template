@@ -36,11 +36,13 @@ function sine(value) {
 // TODO: Implement cosine function
 function cosine(value) {
     // return the cosine of the value
+    return Math.cos(value);
 }
 
 // TODO: Implement tangent function
 function tangent(value) {
     // return the tangent of the value
+    return Math.tan(value);
 }
 
 
