@@ -28,7 +28,9 @@ function naturalLog(value) {
 
 // TODO: Implement sine function
 function sine(value) {
+    const sineValue = Math.sin(value);
     // return the sine of the value
+    return sineValue;
 }
 
 // TODO: Implement cosine function
