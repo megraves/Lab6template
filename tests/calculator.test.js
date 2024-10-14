@@ -31,7 +31,7 @@ describe('Bug fixed in reciprocal', function() {
     });
 
     const ans2 = calculator.calculateReciprocal(4);
-    it('should return 1 or 0.25', function() {
+    it('should return 0.25', function() {
         assert.strictEqual(ans2, 0.25);
     });
 });
