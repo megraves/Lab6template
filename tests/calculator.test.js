@@ -17,3 +17,9 @@ describe('Calculator Calculation Functions', function() {
 
 
 // Add your tests here
+describe('Calculate Square', function() {
+    const ans = calculator.calculateSquare(7);
+    it('should return 49', function () {
+        assert.strictEqual(ans, 49);
+    });
+});
