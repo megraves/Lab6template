@@ -19,9 +19,19 @@ describe('Calculator Calculation Functions', function() {
 // Add your tests here
 describe('Calculate Square', function() {
     const ans = calculator.calculateSquare(7);
-    it('should return 49', function () {
+    it('should return 49', function() {
         assert.strictEqual(ans, 49);
     });
+    
+    const ans2 = calculator.calculateSquare(0);
+    it('should return 0', function() {
+        assert.strictEqual(ans2, 0);
+    });
+
+    const ans3 = calculator.calculateSquare(-2);
+    it('should return 4', function() {
+        assert.strictEqual(ans3, 4);
+    })
 });
 
 describe('Bug fixed in reciprocal', function() {
@@ -45,7 +55,12 @@ describe("Root is calculated correctly", function() {
     const ans2 = calculator.calculateSquareRoot(1/16);
     it('should return 1/4', function() {
         assert.strictEqual(ans2, 1/4);
-    })
+    });
+
+    const ans3 = calculator.calculateSquareRoot(-2);
+    it('should not return a number', function() {
+        assert.strictEqual(ans3, NaN);
+    });
 });
 
 describe("natural log is calculated correctly", function() {
