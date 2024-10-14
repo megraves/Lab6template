@@ -35,3 +35,27 @@ describe('Bug fixed in reciprocal', function() {
         assert.strictEqual(ans2, 0.25);
     });
 });
+
+describe("Root is calculated correctly", function() {
+    const ans1 = calculator.calculateSquareRoot(64);
+    it('should return 8', function() {
+        assert.strictEqual(ans1, 8);
+    });
+
+    const ans2 = calculator.calculateSquareRoot(1/16);
+    it('should return 1/4', function() {
+        assert.strictEqual(ans2, 1/4);
+    })
+});
+
+describe("natural log is calculated correctly", function() {
+    const ans1 = calculator.naturalLog(1);
+    it('should return 0', function() {
+        assert.strictEqual(ans1, 0);
+    });
+
+    const ans2 = calculator.naturalLog(Math.E);
+    it('should return 1', function() {
+        assert.strictEqual(ans2, 1);
+    });
+});
