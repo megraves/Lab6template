@@ -53,5 +53,9 @@ function tangent(value) {
 module.exports = {
     calculateSquareRoot,
     calculateSquare,
-    calculateReciprocal
+    calculateReciprocal,
+    naturalLog,
+    sine,
+    cosine,
+    tangent
 };
