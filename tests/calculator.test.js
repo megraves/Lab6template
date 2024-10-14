@@ -47,3 +47,15 @@ describe("Root is calculated correctly", function() {
         assert.strictEqual(ans2, 1/4);
     })
 });
+
+describe("natural log is calculated correctly", function() {
+    const ans1 = calculator.naturalLog(1);
+    it('should return 0', function() {
+        assert.strictEqual(ans1, 0);
+    });
+
+    const ans2 = calculator.naturalLog(Math.E);
+    it('should return 1', function() {
+        assert.strictEqual(ans2, 1);
+    });
+});
