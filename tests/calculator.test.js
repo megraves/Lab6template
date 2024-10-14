@@ -23,3 +23,15 @@ describe('Calculate Square', function() {
         assert.strictEqual(ans, 49);
     });
 });
+
+describe('Bug fixed in reciprocal', function() {
+    const ans1 = calculator.calculateReciprocal(0.25);
+    it('should return 4', function() {
+        assert.strictEqual(ans1, 4);
+    });
+
+    const ans2 = calculator.calculateReciprocal(4);
+    it('should return 1 or 0.25', function() {
+        assert.strictEqual(ans2, 0.25);
+    });
+});
