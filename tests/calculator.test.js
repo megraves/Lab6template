@@ -74,3 +74,15 @@ describe("natural log is calculated correctly", function() {
         assert.strictEqual(ans2, 1);
     });
 });
+
+describe("sine is calculated correctly", function() {
+    //TODO: Test the sine function
+});
+
+describe("cosine is calculated correctly", function() {
+    //TODO: Test the cosine function
+});
+
+describe("tangent is calculated correctly", function() {
+    //TODO: Test the tangent function
+});
