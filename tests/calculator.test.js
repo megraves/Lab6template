@@ -35,3 +35,15 @@ describe('Bug fixed in reciprocal', function() {
         assert.strictEqual(ans2, 0.25);
     });
 });
+
+describe("Root is calculated correctly", function() {
+    const ans1 = calculator.calculateSquareRoot(64);
+    it('should return 8', function() {
+        assert.strictEqual(ans1, 8);
+    });
+
+    const ans2 = calculator.calculateSquareRoot(1/16);
+    it('should return 1/4', function() {
+        assert.strictEqual(ans2, 1/4);
+    })
+});
