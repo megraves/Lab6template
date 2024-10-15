@@ -1,4 +1,4 @@
-const { naturalLog } = require("./calculator");
+// const { naturalLog } = require("./calculator");
 
 let display = document.getElementById('display');
 
