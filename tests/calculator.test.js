@@ -128,4 +128,48 @@ describe("tangent is calculated correctly", function() {
     it('should return 0', function() {
         assert.equal(Math.round(ans3), 0);
     });
+ });
+ describe("Reciprocal of negative values", function() {
+    const ans1 = calculator.calculateReciprocal(-4);
+    it('should return -0.25', function() {
+        assert.strictEqual(ans1, -0.25);
+    });
+
+    const ans2 = calculator.calculateReciprocal(-0.5);
+    it('should return -2', function() {
+        assert.strictEqual(ans2, -2);
+    });
+ });
+ describe("Sine of negative values", function() {
+    const ans1 = calculator.sine(-Math.PI / 2);
+    it('should return -1', function() {
+        assert.strictEqual(ans1, -1);
+    });
+
+    const ans2 = calculator.sine(-Math.PI);
+    it('should return approximately 0', function() {
+        assert.strictEqual(Math.round(ans2), 0);
+    });
+ });
+ describe("Cosine of negative values", function() {
+    const ans1 = calculator.cosine(-Math.PI / 2);
+    it('should return approximately 0', function() {
+        assert.strictEqual(Math.round(ans1), 0);
+    });
+
+    const ans2 = calculator.cosine(-Math.PI);
+    it('should return -1', function() {
+        assert.strictEqual(ans2, -1);
+    });
+ });
+describe("Tangent of large angles", function() {
+    const ans1 = calculator.tangent(Math.PI * 10);
+    it('should return approximately 0', function() {
+        assert.strictEqual(Math.round(ans1), 0);
+    });
+
+    const ans2 = calculator.tangent(-Math.PI * 5);
+    it('should return approximately 0', function() {
+        assert.strictEqual(Math.round(ans2), 0);
+    });
 });
