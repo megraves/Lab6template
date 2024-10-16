@@ -20,6 +20,9 @@ function deleteLast() {
     display.value = display.value.slice(0, -1);
 }
 
+//TODO: run store, recall, and reset memory functions:
+
+
 // Calculate and show the result
 function calculateResult() {
 
