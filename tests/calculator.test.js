@@ -77,6 +77,20 @@ describe("natural log is calculated correctly", function() {
 
 describe("sine is calculated correctly", function() {
     //TODO: Test the sine function
+    const ans1 = calculator.sine(0);
+    it('should return 0', function() {
+        assert.strictEqual(ans1, 0);
+    });
+
+    const ans2 = calculator.sine(Math.PI/2);
+    it('should return 1', function() {
+        assert.strictEqual(ans2, 1);
+    });
+
+    const ans3 = calculator.sine(Math.PI);
+    it('should return 0', function() {
+        assert.strictEqual(ans3, 0);
+    });
 });
 
 describe("cosine is calculated correctly", function() {
