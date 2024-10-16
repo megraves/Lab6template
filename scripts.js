@@ -2,6 +2,11 @@
 
 let display = document.getElementById('display');
 
+// TODO: Add keyboard support
+display.addEventListener("keydown", function(e) {
+    display.value += e;
+});
+
 // Append number or operator to the display
 function appendToDisplay(value) {
 
@@ -21,6 +26,7 @@ function deleteLast() {
 }
 
 //TODO: run store, recall, and reset memory functions:
+
 
 
 // Calculate and show the result
