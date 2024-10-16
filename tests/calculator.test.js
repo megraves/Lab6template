@@ -108,10 +108,24 @@ describe("cosine is calculated correctly", function() {
 
     const ans3 = calculator.cosine(Math.PI);
     it('should return -1', function() {
-        assert.equal(ans3, -1);
+        assert.strictEqual(ans3, -1);
     });
 });
 
 describe("tangent is calculated correctly", function() {
     //TODO: Test the tangent function
+    const ans1 = calculator.tangent(0);
+    it('should return 0', function() {
+        assert.strictEqual(ans1, 0);
+    });
+
+    const ans2 = calculator.tangent(Math.PI/4);
+    it('should return 1', function() {
+        assert.strictEqual(Math.round(ans2), 1);
+    });
+
+    const ans3 = calculator.tangent(Math.PI);
+    it('should return 0', function() {
+        assert.equal(Math.round(ans3), 0);
+    });
 });
