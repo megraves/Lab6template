@@ -8,8 +8,6 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: radial-gradient(circle, rgba(255, 182, 193, 0.2) 0%, rgba(255, 182, 193, 0) 70%);
-
         }
         #calculator {
             width: 400px;
@@ -41,9 +39,9 @@
     <input type="text" id="memoryDisplay" placeholder="Memory: 0" disabled><br><br>
 
     <!-- Memory buttons -->
-    <button onclick="memoryStore()">Store</button>
-    <button onclick="memoryRecall()">Recall</button>
-    <button onclick="memoryClear()">Reset</button>
+    <button onclick="memoryStore()" id="memoryButton">Store</button>
+    <button onclick="memoryRecall()" id="recallButton">Recall</button>
+    <button onclick="memoryClear()" id="memoryClearButton">Reset</button>
     <button onclick="clearDisplay()">C</button>
     <button onclick="deleteLast()">Del</button><br><br>
 
