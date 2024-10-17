@@ -4,13 +4,11 @@ let display = document.getElementById('display');
 
 // Append number or operator to the display
 function appendToDisplay(value) {
-
     display.value += value;
 }
 
 // Clear the entire display
 function clearDisplay() {
-
     display.value = '';
 }
 
@@ -21,6 +19,37 @@ function deleteLast() {
 }
 
 //TODO: run store, recall, and reset memory functions:
+
+// Memory Functions
+
+// Get corresponding memory items with id
+const memButton = document.getElementById("memoryButton");
+const recallButton = document.getElementById("recallButton");
+const memoClearButton = document.getElementById("memoryClearButton");
+const memDisplay = document.getElementById("memoryDisplay");
+
+// Variable to store memory item
+let memoryItem = 0;
+
+// Memory store function
+function memoryStore() {
+    memoryItem = display.value;
+    memDisplay.value = `Memory: ${memoryItem}`; // Update the memory display
+}
+
+// Memory recall function
+function memoryRecall() {
+    const lastChar = display.value.slice(-1);
+    if (!/\d/.test(lastChar)) {
+        display.value += memoryItem;
+    }
+}
+
+// Memory clear function
+function memoryClear() {
+    memoryItem = 0;
+    memDisplay.value = `Memory: ${memoryItem}`; // Reset memory display
+}
 
 
 // Calculate and show the result
@@ -71,5 +100,3 @@ function runNaturalLog() {
     const v = naturalLog(display.value);
     display.value = v;
 }
-
-
